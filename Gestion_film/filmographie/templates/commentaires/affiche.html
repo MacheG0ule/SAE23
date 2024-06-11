@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+<h2>Commentaire de {{commentaire.utilisateur}} sur le film {{commentaire.film}}</h2>
+
+<h3>Note : {{commentaire.note}}</h3>
+<h3>{{commentaire.commentaire}}</h3>
+<h3>écrit le : {{commentaire.date}}</h3>
+
+
+{% endblock body %}

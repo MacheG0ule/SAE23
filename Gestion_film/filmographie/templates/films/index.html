@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+<div class="contentindex">
+    <h1>Liste des films</h1>
+    <a class="a" href="/ajout-films">Ajouter un film</a>
+    <a href="/import-films">Importer un film</a>
+
+    <ol>
+        {% for f in liste %}
+            <li> {{f}} <a class="b" href="/affiche-films/{{f.id}}/"> Afficher </a> <a class="b" href="/update-films/{{f.id}}/"> Modifier </a> <a class="b" href="/delete-films/{{f.id}}/"> Supprimer </a> <a class="b" href="{% url 'commentaires-par-film' f.id %}">Voir les commentaires</a> <a class="b" href="/generate-pdf/{{f.id}}/">Générer PDF</a> </li>
+        {% endfor %}
+    </ol>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+<h2>Utilisateur - {{utilisateur.pseudo}}</h2>
+
+<h3>Pseudo : {{utilisateur.pseudo}}</h3>
+<h3>Nom : {{utilisateur.nom}}</h3>
+<h3>Prénom : {{utilisateur.prenom}}</h3>
+<h3>E-mail : {{utilisateur.mail}}</h3>
+<h3>Mot de passe : {{utilisateur.motdepasse}}</h3>
+<h3>Type : {{utilisateur.type}}</h3>
+
+{% endblock body %}

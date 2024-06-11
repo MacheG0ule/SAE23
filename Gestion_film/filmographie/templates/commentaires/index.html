@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+<div class="contentindex">
+    <h1>Espace commentaires</h1>
+    <a class="a" href="/ajout-commentaires">Ajouter un commentaire sur un film</a>
+
+    <ol>
+        {% for c in liste %}
+            <li> {{c}} <a class="b" href="/affiche-commentaires/{{c.id}}/"> Afficher </a> <a class="b" href="/update-commentaires/{{c.id}}/"> Modifier </a> <a class="b" href="/delete-commentaires/{{c.id}}/"> Supprimer </a> </li>
+        {% endfor %}
+    </ol>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+<div class="contentindex">
+    <h1>Catégories de film</h1>
+    <a class="a" href="/ajout-categories">Ajouter une catégorie</a>
+
+    <ol>
+        {% for c in liste %}
+            <li> {{c}} <a class="b" href="/affiche-categories/{{c.id}}/"> Afficher </a> <a class="b" href="/update-categories/{{c.id}}/"> Modifier </a> <a class="b" href="/delete-categories/{{c.id}}/"> Supprimer </a> </li>
+        {% endfor %}
+    </ol>
+</div>
+
+{% endblock body %}

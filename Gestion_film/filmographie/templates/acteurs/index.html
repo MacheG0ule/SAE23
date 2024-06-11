@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+<div class="contentindex">
+
+    <h1>Liste des acteurs</h1>
+    <a class="a" href="/ajout-acteurs">Ajouter un acteur</a>
+
+    <ol>
+        {% for a in liste %}
+            <li> {{a}} <a class="b" href="/affiche-acteurs/{{a.id}}/"> Afficher </a> <a class="b" href="/update-acteurs/{{a.id}}/"> Modifier </a> <a class="b" href="/delete-acteurs/{{a.id}}/"> Supprimer </a> </li>
+        {% endfor %}
+    </ol>
+
+</div>
+
+{% endblock body %}
